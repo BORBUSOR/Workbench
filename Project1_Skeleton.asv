@@ -1,0 +1,102 @@
+% Clear command window, close all graphs, clear workspace
+clc, close all, clear
+% ========================================================================
+
+fprintf("============================================================\n")
+fprintf("Project 1 - Round-off vs Truncation Error\n")
+fprintf("Sebastian Rivas\n")
+display(date())
+fprintf("============================================================\n\n")
+
+% ========================================================================
+format short e
+
+% Define the function f(x)
+f = x*sin(3.5*x);      % Insert Function f(x)
+df = limit((f(x+h)-f(x))/h,h,0) ;     % Insert Exact First Derivative df(x)
+
+
+% Select x value to evaluate derivative
+x = 1.35;
+
+%% Double-Precision
+% loop through the exponents for each delta x value and evaluate the derivative
+for i = 1:20
+  
+  % calculate the delta x
+  del(i,1) = 10^(-i);
+
+  % Backward Finite Difference
+  backward(i,1) = ;
+
+  % Forward Finite Difference
+  forward(i,1) = ;
+
+  % Central Finite Difference
+  central(i,1) = ;
+
+  % calculate the errors compared to exact (analytical) derivative
+  backward_error(i,1) = (f(x)-f(x-1)/;
+  forward_error(i,1) = ;
+  central_error(i,1) = ;
+  
+end
+
+
+% Plot the error vs del x for each method on the log scale
+figure
+hold on
+% Scale of log for axis
+set(gca, 'XScale', 'log', 'YScale', 'log')
+% the loglog() function is the same as plot() but on log scale for both axes
+loglog()
+loglog()
+loglog()
+xlabel('\Delta'), ylabel('Error')
+title('Error on Fordward, Backward, and Central')
+legend('Forward','Backward','Central')
+grid on, hold off
+
+% assemble the results into a table (actually a matrix)
+Table = [];
+
+% print to screen
+fprintf("=========== Double Precision Results ===========\n")
+disp(Table)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Repeat everything, but in single precision
+
+% Select x value to evaluate derivative
+x = single(x);
+
+for i = single(1:20)
+  
+
+end
+
+
+% Plot the error vs del x for each method on the log scale
+figure
+hold on
+% Scale of log for axis
+set(gca, 'XScale', 'log', 'YScale', 'log')
+% the loglog() function is the same as plot() but on log scale for both axes
+loglog()
+loglog()
+loglog()
+xlabel('\Delta'), ylabel('Error')
+title('Error on Fordward, Backward, and Central')
+legend('Forward','Backward','Central')
+grid on
+
+% assemble the results into a table (actually a matrix)
+fprintf("\n\n\n")
+Table = [];
+
+% print to screen
+fprintf("=========== Single Precision Results ===========\n")
+disp(Table);
+
+%% Machine epsilon

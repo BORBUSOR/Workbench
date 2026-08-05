@@ -1,0 +1,54 @@
+% Clear command window, close all graphs, clear workspace
+clc; clear; close all;
+% ========================================================================
+fprintf("============================================================\n")
+fprintf("Project 3 - Solving Systems of Equations using Gauss Elimination")
+fprintf("Sebastian Rivas\n")
+display(date())
+fprintf("============================================================\n\n")
+% ========================================================================
+
+format shortE
+
+%% Import text files A and b here
+% Arrays A and b go here somehow
+A=dlm('A.txt')
+b=dlm('b.txt')
+
+ x=ones(length(b),1)
+ resA*x-b;
+
+ %Infinite norms of ones
+ norm_x=norm(res,inf)
+%% Diag dom function insert here titled diagDom
+%Import diagDom func here
+
+%% Gauss Function Here
+
+res=A*x_gauss-b
+res_norm=norm(res,inf)
+
+%Only for the class example, not for quiz
+x= A/b
+fprintf('Answers')
+
+% For quiz use x=ones(10,1)
+function [x, A, b] = gauss(A,b)
+fprintf("Converting A to upper triangular:\n")
+n = length(b); % get number of equations
+x = zeros(n,1); % allocate memory
+% Triangulate the A matrix
+for j= 1:n-1% loop through each column that has elements below diagonal
+for i= j+1:n% transform all elements below diagonal to 0
+s = -A(i,j)/A(j,j); % calculate multiplier
+A(i,:) = A(i,:) + s*A(j,:); % apply ERO to the row of A
+b(i) = b(i) + s*b(j); % apply ERO to b (right hand side vector) as well
+end
+end
+% solve last equation
+x(end) = b(end)/A(end,end);
+% solve subsequent equations moving backwards (up)
+for i=(n-1):-1:1
+x(i) = (b(i)-A(i,(i+n)*x((i+n):n/A(i,i))));
+end
+end
