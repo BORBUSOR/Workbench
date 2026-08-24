@@ -1,0 +1,12 @@
+=====================================================
+ GTA V MOD - BUILD & UPDATE INSTRUCTIONS
+=====================================================
+
+1. Make your changes to your C# files (e.g., adding effects, updating code).
+2. Save your files (Ctrl + S).
+3. Open your terminal inside the "GTA V Mod" folder.
+4. Run this exact copy-paste command to build and update your game:
+
+   dotnet build GtaModProject.csproj; copy bin\Debug\net48\GtaModProject.dll "D:\Grand Theft Auto V Legacy\scripts\"
+
+5. Launch GTA V and enjoy!

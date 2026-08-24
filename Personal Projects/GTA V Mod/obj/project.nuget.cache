@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "zmMkDmjP+oQ=",
+  "success": true,
+  "projectFilePath": "E:\\FunFolder\\GTA V Mod\\GtaModProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chipi\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\chipi\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.3\\microsoft.netframework.referenceassemblies.net48.1.0.3.nupkg.sha512",
+    "C:\\Users\\chipi\\.nuget\\packages\\scripthookvdotnet3\\3.6.0\\scripthookvdotnet3.3.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

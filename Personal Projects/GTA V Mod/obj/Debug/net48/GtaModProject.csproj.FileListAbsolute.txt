@@ -1,0 +1,11 @@
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.csproj.AssemblyReference.cache
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.AssemblyInfoInputs.cache
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.AssemblyInfo.cs
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.csproj.CoreCompileInputs.cache
+E:\FunFolder\GTA V Mod\bin\Debug\net48\GtaModProject.dll
+E:\FunFolder\GTA V Mod\bin\Debug\net48\GtaModProject.pdb
+E:\FunFolder\GTA V Mod\bin\Debug\net48\ScriptHookVDotNet3.dll
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModPr.9F779EBB.Up2Date
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.dll
+E:\FunFolder\GTA V Mod\obj\Debug\net48\GtaModProject.pdb
