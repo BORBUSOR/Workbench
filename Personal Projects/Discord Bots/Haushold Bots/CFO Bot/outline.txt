@@ -1,0 +1,43 @@
+# HAUSHOLD DISCORD BOT - PROJECT OUTLINE
+
+## 🗂️ WORKSPACE ARCHITECTURE
+
+1. ROOT DIRECTORY
+- main.py          : The heart of the bot. Wakes the bot up, connects to Discord, and loads all Cogs.
+- .env             : CRITICAL SECRET FILE. Holds Discord Token, Plaid API keys, and Database URLs. (DO NOT COMMIT TO GITHUB)
+- requirements.txt : List of required Python packages (discord.py, plaid-python, pandas, python-dotenv).
+
+2. /COGS FOLDER (The Bot's Features/Commands)
+- income.py        : Handles the /paycheck command, calculates splits, and announces allocations.
+- budget.py        : Manages custom nicknames (e.g., "FUN FUNDS") and the /can-we-afford guilt-free purchase checker.
+- debt_tracker.py  : Handles manual inputs for credit card balances or pulls from API integration.
+- goals.py         : Manages shared goal progress bars (e.g., vacation fund tracking).
+- subscriptions.py : Tracks active subscriptions, who pays for them, and billing dates.
+- reports.py       : Generates the automated weekly and end-of-month CFO financial summaries.
+
+3. /UTILS FOLDER (The Brains & Backend)
+- plaid_client.py  : Script that securely interfaces with the Plaid API to fetch bank/credit card data.
+- allocator.py     : The math engine. Analyzes spending history and calculates optimal savings/spending percentages.
+- database.py      : The SQLite database handler to store balances, nicknames, and history between server restarts.
+
+---
+
+## 🗓️ DEVELOPMENT TIMELINE
+
+PHASE 1: THE MANUAL FOUNDATION (Weeks 1-2)
+- [ ] Set up main.py and get the bot online in the Haushold server.
+- [ ] Build the /paycheck command with hardcoded allocation percentages (e.g., 50% Needs, 30% Wants, 20% Savings).
+- [ ] Set up database.py (SQLite) to save user data and custom fund nicknames.
+- [ ] Implement the Guilt-Free Purchase Checker to cross-reference the "FUN FUNDS".
+
+PHASE 2: TRACKING & GOALS (Weeks 3-4)
+- [ ] Implement manual credit card debt tracking commands.
+- [ ] Build the Shared Goal Progress Bars (visual embed updates).
+- [ ] Build the Subscription Tracker.
+- [ ] Program discord.ext.tasks to generate the automated End-of-Month CFO Report.
+
+PHASE 3: THE API INTEGRATION (Weeks 5-6)
+- [ ] Sign up for a free developer account with Plaid.
+- [ ] Generate individual access_tokens for each user to separate financial data securely.
+- [ ] Write plaid_client.py to fetch live credit card balances and recent transaction data.
+- [ ] Update allocator.py to adjust percentages dynamically based on fetched spending history.
